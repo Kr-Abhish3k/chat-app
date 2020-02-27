@@ -34,8 +34,6 @@ socket.emit("join", { userName, room }, error => {
 });
 
 socket.on("refreshUserList", ({ users, room }) => {
-	console.log(users);
-	console.log(room);
 	const html = Mustache.render($sidebar_template, {
 		room,
 		users
